@@ -1,0 +1,95 @@
+{
+    "albums": [
+        {
+            "name": "Please Please Me",
+            "year": 1963,
+            "duration": "31:45",
+            "cover": "Please Please Me",
+            "vinyl": "Please Please Me vinyl"
+        },
+        {
+            "name": "With the Beatles",
+            "year": 1963,
+            "duration": "33:07",
+            "cover": "With the Beatles",
+            "vinyl": "With the Beatles vinyl"
+        },
+        {
+            "name": "A Hard Day's Night",
+            "year": 1964,
+            "duration": "30:13",
+            "cover": "A Hard Days Night",
+            "vinyl": "A Hard Days Night vinyl"
+        },
+        {
+            "name": "Beatles for Sale",
+            "year": 1964,
+            "duration": "33:43",
+            "cover": "Beatles for Sale",
+            "vinyl": "Beatles for Sale vinyl"
+        },
+        {
+            "name": "Help!",
+            "year": 1965,
+            "duration": "33:44",
+            "cover": "Help",
+            "vinyl": "Help vinyl"
+        },
+        {
+            "name": "Rubber Soul",
+            "year": 1965,
+            "duration": "35:50",
+            "cover": "Rubber Soul",
+            "vinyl": "Rubber Soul vinyl"
+        },
+        {
+            "name": "Revolver",
+            "year": 1966,
+            "duration": "34:43",
+            "cover": "Revolver",
+            "vinyl": "Revolver vinyl"
+        },
+        {
+            "name": "Sgt. Pepper's Lonely Hearts Club Band",
+            "year": 1967,
+            "duration": "39:52",
+            "cover": "Sgt Pepper",
+            "vinyl": "Sgt Pepper vinyl"
+        },
+        {
+            "name": "Magical Mystery Tour",
+            "year": 1967,
+            "duration": "36:48",
+            "cover": "Magical Mystery Tour",
+            "vinyl": "Magical Mystery Tour vinyl"
+        },
+        {
+            "name": "The Beatles (The White Album)",
+            "year": 1968,
+            "duration": "93:35",
+            "cover": "White Album",
+            "vinyl": "White Album vinyl"
+        },
+        {
+            "name": "Yellow Submarine",
+            "year": 1969,
+            "duration": "40:12",
+            "cover": "Yellow Submarine",
+            "vinyl": "Yellow Submarine vinyl"
+        },
+        {
+            "name": "Abbey Road",
+            "year": 1969,
+            "duration": "47:23",
+            "cover": "Abbey Road",
+            "vinyl": "Abbey Road vinyl"
+        },
+        {
+            "name": "Let It Be",
+            "year": 1970,
+            "duration": "35:10",
+            "cover": "Let It Be",
+            "vinyl": "Let It Be vinyl"
+        }
+    ]
+}

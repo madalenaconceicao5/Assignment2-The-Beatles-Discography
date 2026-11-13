@@ -1,0 +1,40 @@
+body{
+    font-family: 'Modesto Condensed';
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vw;
+}
+
+#title{
+    text-align: center;
+    font-size: 18vh;
+    color: black;
+    margin: 0;
+}
+
+#faces{
+    display: inline-flex;
+    height: 25vh;
+    width: 100%;
+    gap: 5vw;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+
+#discography{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5vw;
+    width: 100%;
+    height: auto;
+}
+
+.album{
+    background-color: blueviolet;
+    width: 100%;
+    height: auto;
+}

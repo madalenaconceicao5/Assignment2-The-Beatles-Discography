@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BEATLES ALBUMS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="title">THE BEATLES<br>ALBUMS</h1>
+    <div id="faces">
+        <img id="face1" src="webp/faces/john1.webp">
+        <img id="face2" src="webp/faces/paul1.webp">
+        <img id="face3" src="webp/faces/george1.webp">
+        <img id="face4" src="webp/faces/ringo1.webp">
+    </div>
+    <div id="frequency"></div>
+    <div id="discography">
+        <div class="album"></div>
+        <div class="album"></div>
+    </div>
+</body>
+
+ <!--fzr como na aula e ver-->
+<script>
+    let faces = ['john', 'paul', 'george', 'ringo']
+
+    function changeFaces(){
+        let i=0;
+
+        for( let face of faces){
+            let number= Math.floor(Math.random() * 5) + 1
+
+            document.getElementById('face' + (i + 1)).src = 'webp/faces/' + face + number + '.webp'
+            i++;
+        }
+    }
+
+    changeFaces();
+    setInterval(changeFaces, 1000);
+</script>
+</html>
