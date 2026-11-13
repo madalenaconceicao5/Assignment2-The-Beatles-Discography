@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Modesto Condensed';
     font-weight: bold;
     display: flex;
@@ -7,14 +7,14 @@ body{
     margin: 3vw;
 }
 
-#title{
+#title {
     text-align: center;
     font-size: 18vh;
     color: black;
     margin: 0;
 }
 
-#faces{
+#faces {
     display: inline-flex;
     height: 25vh;
     width: 100%;
@@ -23,33 +23,33 @@ body{
     margin: 15vh 0;
 }
 
-.face{
+.face {
     background-color: #016BFD;
     border: 0.15vw solid #016BFD;
 }
 
-#frequency{
+#frequency {
     width: 100%;
     overflow: visible;
 }
 
-.bar{
+.bar {
     stroke: black;
-    stroke-width: 2;
+    stroke-width: 10;
     opacity: 100;
 }
 
 
-#discography{
+#discography {
     background-color: aqua;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 5vw;
     width: 100%;
     height: auto;
 }
 
-.album{
+.album {
     background-color: blueviolet;
     width: 100%;
     height: auto;
