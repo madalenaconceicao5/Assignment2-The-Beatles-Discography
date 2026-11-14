@@ -44,18 +44,22 @@ fetch('albums_info.json')
         for(let album of data.albums){
             let albumDiv = document.createElement('div');
             albumDiv.classList.add('album');
-            
-            let albumCover = document.createElement('img');
-            albumCover.src = `webp/${album.cover}.webp`;
-            albumCover.alt = album.name;
+            albumDiv.style.setProperty('--cover', `url("webp/${album.cover}.webp")`);
+            albumDiv.style.setProperty('--vinyl', `url("webp/${album.vinyl}.webp")`);
+
             let albumNameYear = document.createElement('p');
             albumNameYear.textContent = `${album.name} (${album.year})`;
             let albumDuration = document.createElement('p');
             albumDuration.textContent = `Duration: ${album.duration}`;
 
-            albumDiv.append (albumCover, albumNameYear, albumDuration);
+            albumDiv.append (albumNameYear, albumDuration);
             albumsContainer.appendChild(albumDiv);
 
+            console.log({
+                album: album.name,
+                cover: albumDiv.style.getPropertyValue('--cover'),
+                vinyl: albumDiv.style.getPropertyValue('--vinyl')
+            });
         }
     })
     .catch(error => console.log('Error:', error));

@@ -56,22 +56,24 @@ body {
 }
 
 .album {
+    display: flex;
+    flex-direction: column;
     width: fit-content;
     height: 64vh;
     padding: 3vw;
     text-align: center;
     outline: 0.2vw solid black;
+    background-image: var(--cover);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: 10vh;
+    background-size: 70%;
 }
 
-.album img{
-    width: 20vw;
-    height: auto;
-}
-
-.album p:nth-child(2){
+.album p:nth-child(1){
     font-size: 2vw;
     margin: 2vh;
 }
-.album p:nth-child(3){
+.album p:nth-child(2){
     font-size: xxx-large;
 }
