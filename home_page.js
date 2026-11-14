@@ -21,7 +21,7 @@ function frequencyAnimation() {
     let scrollPosition = window.scrollY;
     let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     let progress = scrollPosition / maxScroll;
-    let visibleBars = Math.floor((progress - 0.1) * bars.length *2);
+    let visibleBars = Math.floor((progress - 0.05) * bars.length * 4);
 
     for (let [index, bar] of bars.entries()) {
         if (index < visibleBars) {
@@ -46,16 +46,14 @@ fetch('albums_info.json')
             albumDiv.classList.add('album');
             
             let albumCover = document.createElement('img');
-            albumCover.src = `webp/covers/${album.cover}.webp`;
+            albumCover.src = `webp/${album.cover}.webp`;
             albumCover.alt = album.name;
-            let albumName = document.createElement('p');
-            albumName.textContent = album.name;
-            let albumYear = document.createElement('p');
-            albumYear.textContent = album.year;
+            let albumNameYear = document.createElement('p');
+            albumNameYear.textContent = `${album.name} (${album.year})`;
             let albumDuration = document.createElement('p');
-            albumDuration.textContent = album.duration;
+            albumDuration.textContent = `Duration: ${album.duration}`;
 
-            albumDiv.append (albumCover, albumName, albumYear, albumDuration);
+            albumDiv.append (albumCover, albumNameYear, albumDuration);
             albumsContainer.appendChild(albumDiv);
 
         }

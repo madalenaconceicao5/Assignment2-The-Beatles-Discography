@@ -25,7 +25,7 @@ body {
     gap: 5vw;
     justify-content: center;
     margin-top: 12vh;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 }
 
 .face {
@@ -47,16 +47,31 @@ body {
 
 
 #discography {
-    background-color: aqua;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5vw;
+    justify-items: center;
     width: 100%;
     height: auto;
 }
 
 .album {
-    background-color: blueviolet;
-    width: 100%;
+    width: fit-content;
+    height: 64vh;
+    padding: 3vw;
+    text-align: center;
+    outline: 0.2vw solid black;
+}
+
+.album img{
+    width: 20vw;
     height: auto;
+}
+
+.album p:nth-child(2){
+    font-size: 2vw;
+    margin: 2vh;
+}
+.album p:nth-child(3){
+    font-size: xxx-large;
 }
