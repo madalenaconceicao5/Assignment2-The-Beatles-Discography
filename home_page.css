@@ -56,24 +56,47 @@ body {
 }
 
 .album {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    height: 64vh;
+    width: 21vw;
+    height: 55vh;
     padding: 3vw;
     text-align: center;
     outline: 0.2vw solid black;
+}
+
+.image{
+    width: 21vw;
+    height: 16vw;
     background-image: var(--cover);
     background-repeat: no-repeat;
     background-position: top;
-    background-position-y: 10vh;
-    background-size: 70%;
+    background-size: 70% auto;
+
+    transform-origin: center center;
 }
 
-.album p:nth-child(1){
+.album p:nth-child(2){
     font-size: 2vw;
     margin: 2vh;
 }
-.album p:nth-child(2){
+.album p:nth-child(3){
     font-size: xxx-large;
+}
+
+.album:hover{
+    outline: 1vw solid black;
+}
+
+.album:hover .image{
+    background-image: var(--vinyl);
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
 }
