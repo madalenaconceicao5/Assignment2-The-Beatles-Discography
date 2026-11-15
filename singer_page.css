@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Anton;
+    src: url(./fonts/Anton.ttf);
+}
+
+body {
+    font-family: 'Anton';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3vw;
+}
+
+#biography{
+    display: flex;
+    flex-direction: column;
+    width: 51vw;
+}
+
+#name{
+    font-size: 16vh;
+    color: black;
+    margin: 0;
+}
+
+#text{
+    font-size: xxx-large;
+}
+
+#image{
+    background-color: #016BFD;
+    border: 0.15vw solid #016BFD;
+    width: 50vh;
+    height: 50vh;
+    margin-top: 7vh;
+    object-fit: contain;
+}
+
+a{
+    position: fixed;
+    bottom: 5vh;
+    right: 9vw;
+    padding: 1vh 2vh;
+    background-color: #016BFD;
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+}

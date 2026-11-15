@@ -21,7 +21,7 @@ function frequencyAnimation() {
     let scrollPosition = window.scrollY;
     let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     let progress = scrollPosition / maxScroll;
-    let visibleBars = Math.floor((progress - 0.05) * bars.length * 4);
+    let visibleBars = Math.floor((progress - 0.05) * bars.length * 5);
 
     for (let [index, bar] of bars.entries()) {
         if (index < visibleBars) {

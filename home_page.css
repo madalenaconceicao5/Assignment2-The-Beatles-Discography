@@ -31,6 +31,11 @@ body {
 .face {
     background-color: #016BFD;
     border: 0.15vw solid #016BFD;
+    width: 25vh;
+}
+
+.face:hover{
+    outline: 1vw solid black;
 }
 
 #frequency {
@@ -78,10 +83,6 @@ body {
 }
 .album p:nth-child(3){
     font-size: xxx-large;
-}
-
-.album:hover{
-    outline: 1vw solid black;
 }
 
 .album:hover .image{
