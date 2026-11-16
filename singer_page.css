@@ -6,15 +6,18 @@
 body {
     font-family: 'Anton';
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin: 3vw;
+    gap: 3vh;
 }
 
 #biography{
     display: flex;
-    flex-direction: column;
-    width: 51vw;
+    flex-direction: row;
+    width: 93%;
+    justify-content: space-between;
+    gap: 15vh;
 }
 
 #name{
@@ -24,21 +27,19 @@ body {
 }
 
 #text{
+    margin: 0;
     font-size: xxx-large;
 }
 
 #image{
-    background-color: #016BFD;
-    border: 1vw solid #016BFD;
     height: 50vh;
-    margin-top: 7vh;
     object-fit: contain;
 }
 
 a{
     position: fixed;
     bottom: 5vh;
-    right: 9vw;
+    right: 9.5vw;
     padding: 1vh 2vh;
     background-color: #016BFD;
     color: white;
@@ -48,4 +49,27 @@ a{
 
 a:hover{
     outline: 0.5vw solid black;
+}
+
+@media (max-width:600px){
+    body{
+        margin-left: 6vw;
+    }
+
+    #name{
+        font-size: 11vh;
+    }
+
+    #biography{
+        gap: 8vw;
+
+        #text{
+            font-size: xx-small;
+            margin: 0;
+        }
+
+        #image{
+            height: 32vh;
+        }
+    }
 }

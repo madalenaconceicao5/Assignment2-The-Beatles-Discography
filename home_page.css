@@ -39,13 +39,11 @@ body {
     outline: 0.5vw solid black;
 }
 
-#arrow{
+#cursor{
     position: absolute;
     width: 2vw;
-    height: 3vw;
-    bottom: 1vh;
+    bottom: 0.5vh;
     right: 17vw;
-    background-color: #8BC34A;
     animation: bounce 0.6s ease-in-out infinite alternate;
 }
 
@@ -126,9 +124,10 @@ body {
         }
     }
 
-    #arrow{
+    #cursor{
         bottom: 55vh;
         right: 9vw;
+        animation: bounce 0.8s ease-in-out infinite alternate;
     }
 
     #frequency{
