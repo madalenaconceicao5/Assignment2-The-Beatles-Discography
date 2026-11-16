@@ -1,164 +1,165 @@
 @font-face {
-    font-family: Anton;
-    src: url(./fonts/Anton.ttf);
+	font-family: Anton;
+	src: url(./fonts/Anton.ttf);
 }
 
 body {
-    font-family: 'Anton';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3vw;
-    box-sizing: border-box;
+	font-family: 'Anton';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 3vw;
+	box-sizing: border-box;
 }
 
 #title {
-    text-align: center;
-    font-size: 8vw;
-    color: black;
-    margin: 0;
+	text-align: center;
+	font-size: 8vw;
+	color: black;
+	margin: 0;
 }
 
 #faces {
-    display: inline-flex;
-    height: fit-content;
-    width: 100%;
-    gap: 5vw;
-    justify-content: center;
-    margin-top: 4vh;
-    margin-bottom: 15vh;
+	display: inline-flex;
+	height: fit-content;
+	width: 100%;
+	gap: 5vw;
+	justify-content: center;
+	margin-top: 4vh;
+	margin-bottom: 15vh;
 
-    .face {
-        background-color: #016BFD;
-        border: 0.15vw solid #016BFD;
-        width: 13vw;
-    }
+	.face {
+		background-color: #016BFD;
+		border: 0.15vw solid #016BFD;
+		width: 13vw;
+	}
 
-    .face:hover {
-        outline: 0.5vw solid black;
-    }
+	.face:hover {
+		outline: 0.5vw solid black;
+	}
 }
 
 #cursor {
-    position: absolute;
-    width: 2vw;
-    bottom: 0.5vh;
-    right: 17vw;
-    animation: bounce 0.6s ease-in-out infinite alternate;
+	position: absolute;
+	width: 2vw;
+	bottom: 0.5vh;
+	right: 17vw;
+	animation: bounce 0.6s ease-in-out infinite alternate;
 }
 
 @keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
+	from {
+		transform: translateY(0);
+	}
 
-    to {
-        transform: translateY(-15px);
-    }
+	to {
+		transform: translateY(-15px);
+	}
 }
 
 #frequency {
-    width: 100%;
-    overflow: visible;
-    margin-bottom: 15vh;
+	width: 100%;
+	overflow: visible;
+	margin-bottom: 15vh;
 
-    .bar {
-        stroke: black;
-        stroke-width: 10;
-        opacity: 100;
-    }
+	.bar {
+		stroke: black;
+		stroke-width: 10;
+		opacity: 100;
+	}
 }
 
 #discography {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vw;
-    justify-items: center;
-    width: 100%;
-    height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5vw;
+	justify-items: center;
+	width: 100%;
+	height: auto;
 
-    .album {
-        width: 21vw;
-        height: 55vh;
-        padding: 3vw;
-        text-align: center;
-        outline: 0.2vw solid black;
+	.album {
+		width: 21vw;
+		height: 55vh;
+		padding: 3vw;
+		text-align: center;
+		outline: 0.2vw solid black;
 
-        .image {
-            height: 16vw;
-            background-image: var(--cover);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            transform-origin: 50% 50%;
-        }
+		.image {
+			height: 16vw;
+			background-image: var(--cover);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			transform-origin: 50% 50%;
+		}
 
-        p:nth-child(2) {
-            font-size: 2vw;
-            margin: 2vh;
-            margin-top: 3.5vh;
-        }
+		p:nth-child(2) {
+			font-size: 2vw;
+			margin: 2vh;
+			margin-top: 3.5vh;
+		}
 
-        p:nth-child(3) {
-            font-size: 1vw;
-        }
+		p:nth-child(3) {
+			font-size: 1vw;
+		}
 
-        &:hover .image {
-            background-image: var(--vinyl);
-            animation: spin 3s linear infinite;
-        }
-    }
+		&:hover .image {
+			background-image: var(--vinyl);
+			animation: spin 3s linear infinite;
+		}
+	}
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
+	from {
+		transform: rotate(0deg);
+	}
 
-    to {
-        transform: rotate(360deg);
-    }
+	to {
+		transform: rotate(360deg);
+	}
 }
 
-@media (max-width:600px),(hover: none) {
-    #faces {
-        margin-bottom: 6vh;
-        margin-top: 6vh;
+@media (max-width:600px),
+(hover: none) {
+	#faces {
+		margin-bottom: 6vh;
+		margin-top: 6vh;
 
-        .face {
-            width: 18vw;
-        }
-    }
+		.face {
+			width: 18vw;
+		}
+	}
 
-    #cursor {
-        bottom: 50.5vh;
-        right: 9vw;
-        animation: bounce 0.8s ease-in-out infinite alternate;
-    }
+	#cursor {
+		bottom: 50.5vh;
+		right: 9vw;
+		animation: bounce 0.8s ease-in-out infinite alternate;
+	}
 
-    #frequency {
-        margin-bottom: 6vh;
-    }
+	#frequency {
+		margin-bottom: 6vh;
+	}
 
-    #discography {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+	#discography {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
-        .album {
-            width: 35vw;
-            height: 62vw;
-        }
+		.album {
+			width: 35vw;
+			height: 62vw;
+		}
 
-        .image {
-            height: 35vw;
-        }
+		.image {
+			height: 35vw;
+		}
 
-        p:nth-child(2) {
-            font-size: 3.5vw;
-        }
+		p:nth-child(2) {
+			font-size: 3.5vw;
+		}
 
-        p:nth-child(3) {
-            font-size: 2.5vw;
-        }
-    }
+		p:nth-child(3) {
+			font-size: 2.5vw;
+		}
+	}
 }

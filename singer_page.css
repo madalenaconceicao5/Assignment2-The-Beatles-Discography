@@ -1,78 +1,79 @@
 @font-face {
-    font-family: Anton;
-    src: url(./fonts/Anton.ttf);
+	font-family: Anton;
+	src: url(./fonts/Anton.ttf);
 }
 
 body {
-    font-family: 'Anton';
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 3vw;
-    gap: 3vh;
+	font-family: 'Anton';
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 3vw;
+	gap: 3vh;
 }
 
 #name {
-    font-size: 16vh;
-    color: black;
-    margin: 0;
+	font-size: 16vh;
+	color: black;
+	margin: 0;
 }
 
 #biography {
-    display: flex;
-    flex-direction: row;
-    width: 93%;
-    justify-content: space-between;
-    gap: 15vh;
-    margin-top: 2vw;
+	display: flex;
+	flex-direction: row;
+	width: 93%;
+	justify-content: space-between;
+	gap: 15vh;
+	margin-top: 2vw;
 
-    #text {
-        margin: 0;
-        font-size: 2vw;
-    }
+	#text {
+		margin: 0;
+		font-size: 2vw;
+	}
 
-    #image {
-        height: 50vh;
-        object-fit: contain;
-    }
+	#image {
+		height: 50vh;
+		object-fit: contain;
+	}
 }
 
 a {
-    position: fixed;
-    bottom: 5vh;
-    right: 9.5vw;
-    padding: 1vh 2vh;
-    background-color: #016BFD;
-    color: white;
-    text-decoration: none;
-    font-size: 3vh;
+	position: fixed;
+	bottom: 5vh;
+	right: 9.5vw;
+	padding: 1vh 2vh;
+	background-color: #016BFD;
+	color: white;
+	text-decoration: none;
+	font-size: 3vh;
 
-    &:hover {
-        outline: 0.5vw solid black;
-    }
+	&:hover {
+		outline: 0.5vw solid black;
+	}
 }
 
 
 
-@media (max-width:600px),(hover: none) {
-    body {
-        margin-left: 6vw;
-    }
+@media (max-width:600px),
+(hover: none) {
+	body {
+		margin-left: 6vw;
+	}
 
-    #name {
-        font-size: 11vh;
-    }
+	#name {
+		font-size: 11vh;
+	}
 
-    #biography {
-        gap: 8vw;
+	#biography {
+		gap: 8vw;
 
-        #text {
-            font-size: 2vw;
-            margin: 0;
-        }
+		#text {
+			font-size: 2vw;
+			margin: 0;
+		}
 
-        #image {
-            height: 32vh;
-        }
-    }
+		#image {
+			height: 32vh;
+		}
+	}
 }
