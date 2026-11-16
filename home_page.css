@@ -9,33 +9,49 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 3vw;
+    box-sizing: border-box;
 }
 
 #title {
     text-align: center;
-    font-size: 16vh;
+    font-size: 9vw;
     color: black;
     margin: 0;
 }
 
 #faces {
     display: inline-flex;
-    height: 25vh;
+    height: fit-content;
     width: 100%;
     gap: 5vw;
     justify-content: center;
-    margin-top: 12vh;
+    margin-top: 4vh;
     margin-bottom: 15vh;
 }
 
 .face {
     background-color: #016BFD;
     border: 0.15vw solid #016BFD;
-    width: 25vh;
+    width: 13vw;
 }
 
 .face:hover{
-    outline: 1vw solid black;
+    outline: 0.5vw solid black;
+}
+
+#arrow{
+    position: absolute;
+    width: 2vw;
+    height: 3vw;
+    bottom: 1vh;
+    right: 17vw;
+    background-color: #8BC34A;
+    animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    from{ transform: translateY(0);}
+    to{ transform: translateY(-15px);}
 }
 
 #frequency {
@@ -98,5 +114,46 @@ body {
     to{
         transform: rotate(360deg);
     }
-    
+}
+
+@media (max-width:600px){
+    #faces{
+        margin-bottom: 6vh;
+        margin-top: 6vh;
+
+        .face{
+            width: 18vw;
+        }
+    }
+
+    #arrow{
+        bottom: 55vh;
+        right: 9vw;
+    }
+
+    #frequency{
+        margin-bottom: 6vh;
+    }
+
+    #discography {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .album{
+            width: 35vw;
+            height: 62vw;
+        }
+
+        .image{
+            height: 35vw;
+        }
+
+        .album p:nth-child(2){
+            font-size: 3.5vw;
+        }
+
+        .album p:nth-child(3) {
+            font-size: 2.5vw;
+        }
+    }
 }
