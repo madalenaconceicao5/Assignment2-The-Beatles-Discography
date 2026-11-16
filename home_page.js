@@ -3,8 +3,8 @@ let faces = ['john', 'paul', 'george', 'ringo'];
 function changeFaces() {
 	let i = 0;
 
-	for (let face of faces) {
-		let number = Math.floor(Math.random() * 5) + 1;
+	for (const face of faces) {
+		const number = Math.floor(Math.random() * 5) + 1;
 
 		document.getElementById('face' + (i + 1)).src = 'webp/faces/' + face + number + '.webp';
 		i++;
@@ -17,9 +17,9 @@ setInterval(changeFaces, 1000);
 let bars = document.querySelectorAll('.bar')
 
 function frequencyAnimation() {
-	let scrollPosition = window.scrollY;
-	let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-	let progress = scrollPosition / maxScroll;
+	const scrollPosition = window.scrollY;
+	const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+	const progress = scrollPosition / maxScroll;
 	let visibleBars;
 	if (window.matchMedia("(max-width: 600px)").matches) {
 		visibleBars = Math.floor((progress) * bars.length * 6);
