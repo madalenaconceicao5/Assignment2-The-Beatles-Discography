@@ -97,7 +97,7 @@ body {
     margin-top: 3.5vh;
 }
 .album p:nth-child(3){
-    font-size: xxx-large;
+    font-size: 1vw;
 }
 
 .album:hover .image{
