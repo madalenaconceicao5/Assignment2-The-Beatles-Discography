@@ -21,7 +21,12 @@ function frequencyAnimation() {
     let scrollPosition = window.scrollY;
     let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     let progress = scrollPosition / maxScroll;
-    let visibleBars = Math.floor((progress - 0.05) * bars.length * 5);
+    let visibleBars;
+    if(window.matchMedia("(max-width: 600px)").matches){
+    visibleBars = Math.floor((progress) * bars.length * 6);
+    } else{
+    visibleBars = Math.floor((progress - 0.05) * bars.length * 5);  
+    }
 
     for (let [index, bar] of bars.entries()) {
         if (index < visibleBars) {
