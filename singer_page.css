@@ -24,10 +24,11 @@ body {
     width: 93%;
     justify-content: space-between;
     gap: 15vh;
+    margin-top: 2vw;
 
     #text {
         margin: 0;
-        font-size: xxx-large;
+        font-size: 2vw;
     }
 
     #image {

@@ -18,7 +18,7 @@ let singers = {
         text: "George Harrison (1943–2001) was an English musician, singer, and songwriter, best known as the lead guitarist of The Beatles. Born in Liverpool, he gradually developed his own songwriting style, contributing memorable songs such as Something and Here Comes the Sun. Deeply interested in Indian music and spirituality, he introduced Indian instruments and influences into the band's sound. After The Beatles, he pursued a successful solo career, releasing the acclaimed album All Things Must Pass."
     },
     ringo: {
-        name: "Ringo Star",
+        name: "Ringo Starr",
         image: "webp/faces/Ringo.webp",
         text: "Ringo Starr (born 1940) is an English musician, singer, and actor, best known as the drummer of The Beatles. Born Richard Starkey in Liverpool, he joined the band in 1962, bringing his distinctive drumming style and relaxed personality. Although primarily known for his percussion, he also sang lead vocals on songs such as Yellow Submarine and With a Little Help from My Friends. After the band's breakup, he pursued a solo career and became a successful entertainer, remaining an influential figure in popular music."
     },
