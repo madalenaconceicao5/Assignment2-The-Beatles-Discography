@@ -14,7 +14,6 @@ changeFaces();
 setInterval(changeFaces, 1000);
 
 
-
 let bars = document.querySelectorAll('.bar')
 
 function frequencyAnimation() {
@@ -22,10 +21,10 @@ function frequencyAnimation() {
     let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     let progress = scrollPosition / maxScroll;
     let visibleBars;
-    if(window.matchMedia("(max-width: 600px)").matches){
-    visibleBars = Math.floor((progress) * bars.length * 6);
-    } else{
-    visibleBars = Math.floor((progress - 0.05) * bars.length * 5);  
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        visibleBars = Math.floor((progress) * bars.length * 6);
+    } else {
+        visibleBars = Math.floor((progress - 0.05) * bars.length * 5);
     }
 
     for (let [index, bar] of bars.entries()) {
@@ -39,18 +38,17 @@ function frequencyAnimation() {
 window.addEventListener('scroll', frequencyAnimation);
 
 
-
 fetch('albums_info.json')
     .then(response => response.json())
     .then(data => {
 
         let albumsContainer = document.getElementById('discography');
 
-        for(let album of data.albums){
+        for (let album of data.albums) {
             let albumDiv = document.createElement('div');
             albumDiv.classList.add('album');
 
-            let albumImage= document.createElement('div');
+            let albumImage = document.createElement('div');
             albumImage.classList.add('image');
             albumImage.style.setProperty('--cover', `url("webp/${album.cover}.webp")`);
             albumImage.style.setProperty('--vinyl', `url("webp/${album.vinyl}.webp")`);
@@ -59,7 +57,7 @@ fetch('albums_info.json')
             let albumDuration = document.createElement('p');
             albumDuration.textContent = `Duration: ${album.duration}`;
 
-            albumDiv.append (albumImage, albumNameYear, albumDuration);
+            albumDiv.append(albumImage, albumNameYear, albumDuration);
             albumsContainer.appendChild(albumDiv);
         }
     })

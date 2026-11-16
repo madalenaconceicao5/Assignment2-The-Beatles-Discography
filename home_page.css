@@ -27,19 +27,19 @@ body {
     justify-content: center;
     margin-top: 4vh;
     margin-bottom: 15vh;
+
+    .face {
+        background-color: #016BFD;
+        border: 0.15vw solid #016BFD;
+        width: 13vw;
+    }
+
+    .face:hover {
+        outline: 0.5vw solid black;
+    }
 }
 
-.face {
-    background-color: #016BFD;
-    border: 0.15vw solid #016BFD;
-    width: 13vw;
-}
-
-.face:hover{
-    outline: 0.5vw solid black;
-}
-
-#cursor{
+#cursor {
     position: absolute;
     width: 2vw;
     bottom: 0.5vh;
@@ -48,22 +48,26 @@ body {
 }
 
 @keyframes bounce {
-    from{ transform: translateY(0);}
-    to{ transform: translateY(-15px);}
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
 }
 
 #frequency {
     width: 100%;
     overflow: visible;
     margin-bottom: 15vh;
-}
 
-.bar {
-    stroke: black;
-    stroke-width: 10;
-    opacity: 100;
+    .bar {
+        stroke: black;
+        stroke-width: 10;
+        opacity: 100;
+    }
 }
-
 
 #discography {
     display: grid;
@@ -72,65 +76,67 @@ body {
     justify-items: center;
     width: 100%;
     height: auto;
-}
 
-.album {
-    width: 21vw;
-    height: 55vh;
-    padding: 3vw;
-    text-align: center;
-    outline: 0.2vw solid black;
-}
+    .album {
+        width: 21vw;
+        height: 55vh;
+        padding: 3vw;
+        text-align: center;
+        outline: 0.2vw solid black;
 
-.image{
-    height: 16vw;
-    background-image: var(--cover);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transform-origin: 50% 50%;
-}
+        .image {
+            height: 16vw;
+            background-image: var(--cover);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform-origin: 50% 50%;
+        }
 
-.album p:nth-child(2){
-    font-size: 2vw;
-    margin: 2vh;
-    margin-top: 3.5vh;
-}
-.album p:nth-child(3){
-    font-size: 1vw;
-}
+        p:nth-child(2) {
+            font-size: 2vw;
+            margin: 2vh;
+            margin-top: 3.5vh;
+        }
 
-.album:hover .image{
-    background-image: var(--vinyl);
-    animation: spin 3s linear infinite;
+        p:nth-child(3) {
+            font-size: 1vw;
+        }
+
+        &:hover .image {
+            background-image: var(--vinyl);
+            animation: spin 3s linear infinite;
+        }
+    }
 }
 
 @keyframes spin {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
 
-@media (max-width:600px){
-    #faces{
+@media (max-width:600px),(hover: none) {
+    #faces {
         margin-bottom: 6vh;
         margin-top: 6vh;
 
-        .face{
+        .face {
             width: 18vw;
         }
     }
 
-    #cursor{
-        bottom: 55vh;
+    #cursor {
+        bottom: 50.5vh;
         right: 9vw;
         animation: bounce 0.8s ease-in-out infinite alternate;
     }
 
-    #frequency{
+    #frequency {
         margin-bottom: 6vh;
     }
 
@@ -138,20 +144,20 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
-        .album{
+        .album {
             width: 35vw;
             height: 62vw;
         }
 
-        .image{
+        .image {
             height: 35vw;
         }
 
-        .album p:nth-child(2){
+        p:nth-child(2) {
             font-size: 3.5vw;
         }
 
-        .album p:nth-child(3) {
+        p:nth-child(3) {
             font-size: 2.5vw;
         }
     }

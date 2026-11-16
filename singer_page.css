@@ -12,31 +12,31 @@ body {
     gap: 3vh;
 }
 
-#biography{
-    display: flex;
-    flex-direction: row;
-    width: 93%;
-    justify-content: space-between;
-    gap: 15vh;
-}
-
-#name{
+#name {
     font-size: 16vh;
     color: black;
     margin: 0;
 }
 
-#text{
-    margin: 0;
-    font-size: xxx-large;
+#biography {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+    justify-content: space-between;
+    gap: 15vh;
+
+    #text {
+        margin: 0;
+        font-size: xxx-large;
+    }
+
+    #image {
+        height: 50vh;
+        object-fit: contain;
+    }
 }
 
-#image{
-    height: 50vh;
-    object-fit: contain;
-}
-
-a{
+a {
     position: fixed;
     bottom: 5vh;
     right: 9.5vw;
@@ -45,30 +45,32 @@ a{
     color: white;
     text-decoration: none;
     font-size: 3vh;
+
+    &:hover {
+        outline: 0.5vw solid black;
+    }
 }
 
-a:hover{
-    outline: 0.5vw solid black;
-}
 
-@media (max-width:600px){
-    body{
+
+@media (max-width:600px),(hover: none) {
+    body {
         margin-left: 6vw;
     }
 
-    #name{
+    #name {
         font-size: 11vh;
     }
 
-    #biography{
+    #biography {
         gap: 8vw;
 
-        #text{
+        #text {
             font-size: 2vw;
             margin: 0;
         }
 
-        #image{
+        #image {
             height: 32vh;
         }
     }

@@ -25,7 +25,6 @@ let singers = {
 }
 
 let data = singers[singer];
-
 document.getElementById('name').textContent = data.name;
 document.getElementById('image').src = data.image;
 document.getElementById('text').textContent = data.text;
