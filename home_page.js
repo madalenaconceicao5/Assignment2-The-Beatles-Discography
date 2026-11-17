@@ -11,6 +11,13 @@ async function main() {
 		}
 	}
 
+	urls.push(
+		'webp/faces/John.webp',
+		'webp/faces/Paul.webp',
+		'webp/faces/George.webp',
+		'webp/faces/Ringo.webp',
+	)
+
 	changeFaces()
 	setInterval(changeFaces, 1000)
 

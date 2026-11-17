@@ -23,29 +23,8 @@ let singers = {
 		text: "Ringo Starr (born 1940) is an English musician, singer, and actor, best known as the drummer of The Beatles. Born Richard Starkey in Liverpool, he joined the band in 1962, bringing his distinctive drumming style and relaxed personality. Although primarily known for his percussion, he also sang lead vocals on songs such as Yellow Submarine and With a Little Help from My Friends. After the band's breakup, he pursued a solo career and became a successful entertainer, remaining an influential figure in popular music."
 	},
 }
+let data = singers[singer]
 
-async function main() {
-	let data = singers[singer]
-
-	if (data) {
-		document.getElementById('name').textContent = data.name
-		document.getElementById('image').src = data.image
-		document.getElementById('text').textContent = data.text
-	} else {
-		document.getElementById('name').textContent = 'Singer not found'
-	}
-
-	await preload([data.image])
-	document.getElementById('loader').classList.add('hidden')
-	document.body.classList.remove('loading')
-
-}
-main()
-
-function preload(urls) {
-	return Promise.all(urls.map((src) => new Promise((resolve) => {
-		const img = new Image()
-		img.onload = img.onerror = resolve
-		img.src = src
-	})))
-}
+document.getElementById('name').textContent = data.name
+document.getElementById('image').src = data.image
+document.getElementById('text').textContent = data.text
