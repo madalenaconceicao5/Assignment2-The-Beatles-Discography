@@ -2,6 +2,12 @@ const faces = ['john', 'paul', 'george', 'ringo']
 const bars = document.querySelectorAll('.bar')
 
 async function main() {
+	let i=0
+	const urls=[]
+	for(const face of faces){
+		urls.push(`webp/faces/${face}${i}.webp`)
+	}
+
 	changeFaces()
 	setInterval(changeFaces, 1000)
 
@@ -13,6 +19,8 @@ async function main() {
 
 	if (albums) {
 		for (const album of albums) {
+			urls.push(`webp/faces/${album.cover}`, `webp/faces/${album.vinyl}`)
+
 			let albumDiv = document.createElement('div')
 			albumDiv.classList.add('album')
 
@@ -31,6 +39,18 @@ async function main() {
 	} else {
 		albumsContainer.textContent = 'Could not load albums.'
 	}
+
+	await preload(urls)
+	document.getElementById('loader').classList.add('hidden')
+	document.body.classList.remove('loading')
+}
+
+function preload(urls) {
+	return Promise.all(urls.map((src) => new Promise((resolve) => {
+		const img = new Image()
+		img.onload = img.onerror = resolve
+		img.src = src
+	})))
 }
 
 
