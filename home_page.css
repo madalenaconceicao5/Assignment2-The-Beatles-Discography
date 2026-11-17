@@ -15,63 +15,160 @@ body {
 	&.loading {
 		overflow: hidden;
 	}
-}
 
-#loader {
-	position: fixed;
-	inset: 0;
-	z-index: 9999;
-	display: flex;
-	justify-content: center;
-	background-color: white;
-	transition: opacity 0.4s ease;
+	#loader {
+		position: fixed;
+		inset: 0;
+		z-index: 9999;
+		display: flex;
+		justify-content: center;
+		background-color: white;
+		transition: opacity 0.4s ease;
 
-	p {
-		font-size: 5vw;
-		color: #016BFD;
+		p {
+			font-size: 5vw;
+			color: #016BFD;
+			position: absolute;
+			top: 26%;
+		}
+
+		&.hidden {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	#title {
+		text-align: center;
+		font-size: 8vw;
+		color: black;
+		margin: 0;
+	}
+
+	#faces {
+		display: inline-flex;
+		height: fit-content;
+		width: 100%;
+		gap: 5vw;
+		justify-content: center;
+		margin-top: 4vh;
+		margin-bottom: 15vh;
+
+		.face {
+			background-color: #016BFD;
+			border: 0.15vw solid #016BFD;
+			width: 13vw;
+		}
+
+		.face:hover {
+			outline: 0.5vw solid black;
+		}
+	}
+
+	#cursor {
 		position: absolute;
-		top: 26%;
+		width: 2vw;
+		top: 84vh;
+		right: 13vw;
+		animation: bounce 0.6s ease-in-out infinite alternate;
 	}
 
-	&.hidden {
-		opacity: 0;
-		pointer-events: none;
-	}
-}
+	#frequency {
+		width: 100%;
+		overflow: visible;
+		margin-bottom: 15vh;
 
-#title {
-	text-align: center;
-	font-size: 8vw;
-	color: black;
-	margin: 0;
-}
-
-#faces {
-	display: inline-flex;
-	height: fit-content;
-	width: 100%;
-	gap: 5vw;
-	justify-content: center;
-	margin-top: 4vh;
-	margin-bottom: 15vh;
-
-	.face {
-		background-color: #016BFD;
-		border: 0.15vw solid #016BFD;
-		width: 13vw;
+		.bar {
+			stroke: black;
+			stroke-width: 10;
+			opacity: 100;
+		}
 	}
 
-	.face:hover {
-		outline: 0.5vw solid black;
-	}
-}
+	#discography {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 5vw;
+		justify-items: center;
+		width: 100%;
+		height: auto;
 
-#cursor {
-	position: absolute;
-	width: 2vw;
-	top: 89vh;
-	right: 13vw;
-	animation: bounce 0.6s ease-in-out infinite alternate;
+		.album {
+			width: 21vw;
+			height: 54vh;
+			padding: 3vw;
+			text-align: center;
+			outline: 0.2vw solid black;
+
+			.image {
+				height: 16vw;
+				background-image: var(--cover);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				transform-origin: 50% 50%;
+			}
+
+			p:nth-child(2) {
+				font-size: 2vw;
+				margin: 2vh;
+				margin-top: 3.5vh;
+			}
+
+			p:nth-child(3) {
+				font-size: 1vw;
+			}
+
+			&:hover .image {
+				background-image: var(--vinyl);
+				animation: spin 3s linear infinite;
+			}
+		}
+	}
+
+	@media (max-width:600px),
+	(hover: none) {
+		#faces {
+			margin-bottom: 6vh;
+			margin-top: 6vh;
+
+			.face {
+				width: 18vw;
+			}
+		}
+
+		#cursor {
+			top: 44vh;
+			right: 9vw;
+			animation: bounce 0.8s ease-in-out infinite alternate;
+		}
+
+		#frequency {
+			margin-bottom: 6vh;
+		}
+
+		#discography {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+
+			.album {
+				width: 35vw;
+				height: 62vw;
+
+				.image {
+					height: 35vw;
+				}
+
+				p:nth-child(2) {
+					font-size: 3.5vw;
+				}
+
+				p:nth-child(3) {
+					font-size: 2.5vw;
+				}
+			}
+		}
+	}
 }
 
 @keyframes bounce {
@@ -84,59 +181,6 @@ body {
 	}
 }
 
-#frequency {
-	width: 100%;
-	overflow: visible;
-	margin-bottom: 15vh;
-
-	.bar {
-		stroke: black;
-		stroke-width: 10;
-		opacity: 100;
-	}
-}
-
-#discography {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 5vw;
-	justify-items: center;
-	width: 100%;
-	height: auto;
-
-	.album {
-		width: 21vw;
-		height: 54vh;
-		padding: 3vw;
-		text-align: center;
-		outline: 0.2vw solid black;
-
-		.image {
-			height: 16vw;
-			background-image: var(--cover);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
-			transform-origin: 50% 50%;
-		}
-
-		p:nth-child(2) {
-			font-size: 2vw;
-			margin: 2vh;
-			margin-top: 3.5vh;
-		}
-
-		p:nth-child(3) {
-			font-size: 1vw;
-		}
-
-		&:hover .image {
-			background-image: var(--vinyl);
-			animation: spin 3s linear infinite;
-		}
-	}
-}
-
 @keyframes spin {
 	from {
 		transform: rotate(0deg);
@@ -144,49 +188,5 @@ body {
 
 	to {
 		transform: rotate(360deg);
-	}
-}
-
-@media (max-width:600px),
-(hover: none) {
-	#faces {
-		margin-bottom: 6vh;
-		margin-top: 6vh;
-
-		.face {
-			width: 18vw;
-		}
-	}
-
-	#cursor {
-		top: 42vh;
-		right: 9vw;
-		animation: bounce 0.8s ease-in-out infinite alternate;
-	}
-
-	#frequency {
-		margin-bottom: 6vh;
-	}
-
-	#discography {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-
-		.album {
-			width: 35vw;
-			height: 62vw;
-
-			.image {
-				height: 35vw;
-			}
-
-			p:nth-child(2) {
-				font-size: 3.5vw;
-			}
-
-			p:nth-child(3) {
-				font-size: 2.5vw;
-			}
-		}
 	}
 }
