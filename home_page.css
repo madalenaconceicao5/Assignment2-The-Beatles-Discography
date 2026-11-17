@@ -132,7 +132,7 @@ body {
 	}
 
 	#cursor {
-		bottom: 50.5vh;
+		bottom: 53.5vh;
 		right: 9vw;
 		animation: bounce 0.8s ease-in-out infinite alternate;
 	}
