@@ -1,5 +1,5 @@
-let urlParameters = new URLSearchParams(window.location.search);
-let singer = urlParameters.get('singer');
+let urlParameters = new URLSearchParams(window.location.search)
+let singer = urlParameters.get('singer')
 
 let singers = {
 	john: {
@@ -24,7 +24,7 @@ let singers = {
 	},
 }
 
-let data = singers[singer];
-document.getElementById('name').textContent = data.name;
-document.getElementById('image').src = data.image;
-document.getElementById('text').textContent = data.text;
+let data = singers[singer]
+document.getElementById('name').textContent = data.name
+document.getElementById('image').src = data.image
+document.getElementById('text').textContent = data.text
