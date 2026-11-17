@@ -43,7 +43,6 @@ async function main() {
 	}
 
 	await preload(urls)
-	await new Promise((r) => setTimeout(r, 3000)) // temporary: keeps the loader visible for 3s
 	document.getElementById('loader').classList.add('hidden')
 	document.body.classList.remove('loading')
 }
