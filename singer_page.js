@@ -24,7 +24,28 @@ let singers = {
 	},
 }
 
-let data = singers[singer]
-document.getElementById('name').textContent = data.name
-document.getElementById('image').src = data.image
-document.getElementById('text').textContent = data.text
+async function main() {
+	let data = singers[singer]
+
+	if (data) {
+		document.getElementById('name').textContent = data.name
+		document.getElementById('image').src = data.image
+		document.getElementById('text').textContent = data.text
+	} else {
+		document.getElementById('name').textContent = 'Singer not found'
+	}
+
+	await preload([data.image])
+	document.getElementById('loader').classList.add('hidden')
+	document.body.classList.remove('loading')
+
+}
+main()
+
+function preload(urls) {
+	return Promise.all(urls.map((src) => new Promise((resolve) => {
+		const img = new Image()
+		img.onload = img.onerror = resolve
+		img.src = src
+	})))
+}
