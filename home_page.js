@@ -1,44 +1,15 @@
-let faces = ['john', 'paul', 'george', 'ringo'];
+const faces = ['john', 'paul', 'george', 'ringo']
+const bars = document.querySelectorAll('.bar')
+//retirar ;
 
-function changeFaces() {
-	let i = 0;
+async function main() {
+	changeFaces();
+	setInterval(changeFaces, 1000)
 
-	for (const face of faces) {
-		const number = Math.floor(Math.random() * 5) + 1;
+	window.addEventListener('scroll', frequencyAnimation);
 
-		document.getElementById('face' + (i + 1)).src = 'webp/faces/' + face + number + '.webp';
-		i++;
-	}
-}
-changeFaces();
-setInterval(changeFaces, 1000);
-
-
-let bars = document.querySelectorAll('.bar')
-
-function frequencyAnimation() {
-	const scrollPosition = window.scrollY;
-	const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-	const progress = scrollPosition / maxScroll;
-	let visibleBars;
-	if (window.matchMedia("(max-width: 600px)").matches) {
-		visibleBars = Math.floor((progress) * bars.length * 6);
-	} else {
-		visibleBars = Math.floor((progress - 0.05) * bars.length * 5);
-	}
-
-	for (const [index, bar] of bars.entries()) {
-		if (index < visibleBars) {
-			bar.style.opacity = 1;
-		} else {
-			bar.style.opacity = 0;
-		}
-	}
-}
-window.addEventListener('scroll', frequencyAnimation);
-
-
-fetch('albums_info.json')
+	fetch('albums_info.json')
+	//mudar os then - await
 	.then(response => response.json())
 	.then(data => {
 
@@ -62,3 +33,38 @@ fetch('albums_info.json')
 		}
 	})
 	.catch(error => console.log('Error:', error));
+}
+
+
+function changeFaces() {
+	let i = 0;
+
+	for (const face of faces) {
+		const number = Math.floor(Math.random() * 5) + 1
+
+		document.getElementById('face' + (i + 1)).src = 'webp/faces/' + face + number + '.webp';
+		i++;
+	}
+}
+
+function frequencyAnimation() {
+	const scrollPosition = window.scrollY;
+	const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+	const progress = scrollPosition / maxScroll;
+	let visibleBars;
+	if (window.matchMedia("(max-width: 600px)").matches) {
+		visibleBars = Math.floor((progress) * bars.length * 6);
+	} else {
+		visibleBars = Math.floor((progress - 0.05) * bars.length * 5);
+	}
+
+	for (const [index, bar] of bars.entries()) {
+		if (index < visibleBars) {
+			bar.style.opacity = 1;
+		} else {
+			bar.style.opacity = 0;
+		}
+	}
+}
+
+main();
