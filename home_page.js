@@ -18,8 +18,8 @@ async function main() {
 
 			let albumImage = document.createElement('div')
 			albumImage.classList.add('image')
-			albumImage.style.setProperty('--cover', `url("webp/${album.cover}.webp")`)
-			albumImage.style.setProperty('--vinyl', `url("webp/${album.vinyl}.webp")`)
+			albumImage.style.setProperty('--cover', `url("webp/albums/${album.cover}.webp")`)
+			albumImage.style.setProperty('--vinyl', `url("webp/albums/${album.vinyl}.webp")`)
 			let albumNameYear = document.createElement('p')
 			albumNameYear.textContent = `${album.name} (${album.year})`
 			let albumDuration = document.createElement('p')

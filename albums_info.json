@@ -90,6 +90,13 @@
 			"duration": "35:10",
 			"cover": "Let It Be",
 			"vinyl": "Let It Be vinyl"
+		},
+		{
+			"name": "Live at the BBC",
+			"year": 1994,
+			"duration": "133:37",
+			"cover": "Live at the BBC",
+			"vinyl": "Live at the BBC vinyl"
 		}
 	]
 }
