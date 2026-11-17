@@ -175,18 +175,18 @@ body {
 		.album {
 			width: 35vw;
 			height: 62vw;
-		}
 
-		.image {
-			height: 35vw;
-		}
+			.image {
+				height: 35vw;
+			}
 
-		p:nth-child(2) {
-			font-size: 3.5vw;
-		}
+			p:nth-child(2) {
+				font-size: 3.5vw;
+			}
 
-		p:nth-child(3) {
-			font-size: 2.5vw;
+			p:nth-child(3) {
+				font-size: 2.5vw;
+			}
 		}
 	}
 }
