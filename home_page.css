@@ -68,7 +68,7 @@ body {
 	#cursor {
 		position: absolute;
 		width: 2vw;
-		top: 84vh;
+		top: 89vh;
 		right: 13vw;
 		animation: bounce 0.6s ease-in-out infinite alternate;
 	}
@@ -126,8 +126,7 @@ body {
 		}
 	}
 
-	@media (max-width:600px),
-	(hover: none) {
+	@media (max-width:600px), (hover: none) {
 		#faces {
 			margin-bottom: 6vh;
 			margin-top: 6vh;
@@ -138,7 +137,7 @@ body {
 		}
 
 		#cursor {
-			top: 44vh;
+			top: 42vh;
 			right: 9vw;
 			animation: bounce 0.8s ease-in-out infinite alternate;
 		}
