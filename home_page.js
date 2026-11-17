@@ -1,6 +1,7 @@
 const faces = ['john', 'paul', 'george', 'ringo']
 const bars = document.querySelectorAll('.bar')
 const urls = []
+let albums
 
 async function main() {
 	let i = 0
@@ -17,7 +18,10 @@ async function main() {
 
 	let albumsContainer = document.getElementById('discography')
 	let response = await fetch('albums_info.json')
-	let albums = (response.ok && await response.json())?.albums
+	if (response.ok) {
+		let data = await response.json()
+		albums = data.albums
+	}
 
 	if (albums) {
 		for (const album of albums) {
