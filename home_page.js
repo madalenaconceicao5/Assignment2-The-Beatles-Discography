@@ -1,11 +1,13 @@
 const faces = ['john', 'paul', 'george', 'ringo']
 const bars = document.querySelectorAll('.bar')
+const urls = []
 
 async function main() {
-	let i=0
-	const urls=[]
-	for(const face of faces){
-		urls.push(`webp/faces/${face}${i}.webp`)
+	let i = 0
+	for (const face of faces) {
+		for (let n = 1; n <= faces.length; n++) {
+			urls.push(`webp/faces/${face}${i}.webp`)
+		}
 	}
 
 	changeFaces()
@@ -19,7 +21,7 @@ async function main() {
 
 	if (albums) {
 		for (const album of albums) {
-			urls.push(`webp/faces/${album.cover}`, `webp/faces/${album.vinyl}`)
+			urls.push(`webp/faces/${album.cover}.webp`, `webp/faces/${album.vinyl}.webp`)
 
 			let albumDiv = document.createElement('div')
 			albumDiv.classList.add('album')
@@ -56,13 +58,13 @@ function preload(urls) {
 
 
 function changeFaces() {
-	let i = 0
+	let m = 0
 
 	for (const face of faces) {
-		const number = Math.floor(Math.random() * 5) + 1
+		const number = Math.floor(Math.random() * faces.length) + 1
 
-		document.getElementById('face' + (i + 1)).src = 'webp/faces/' + face + number + '.webp'
-		i++
+		document.getElementById('face' + (m + 1)).src = 'webp/faces/' + face + number + '.webp'
+		m++
 	}
 }
 
@@ -85,5 +87,4 @@ function frequencyAnimation() {
 		}
 	}
 }
-
 main()
